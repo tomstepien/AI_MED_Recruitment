@@ -1,14 +1,14 @@
 # Cardiomegaly Prediction
 
 ## Problem Overview
-The goal of this project is to build a model using classical Machine Learning methods that predicts whether a patient suffers from hypertrophic cardiomyopathy (`Cardiomegaly`) based on numerical features describing heart and lung size, shape ratios, and geometric indicators of heart structure.
+The goal of this project is to build a model using **classical Machine Learning** methods that predicts whether a patient suffers from hypertrophic cardiomyopathy (`Cardiomegaly`) based on numerical features describing heart and lung size, shape ratios, and geometric indicators of heart structure.
 
 The target column `Cardiomegaly` indicates the diagnosis outcome:
 
 - `1` → the patient suffers from Cardiomegaly  
 - `0` → the patient does not suffer from Cardiomegaly  
 
-By analyzing these features, we aim to uncover patterns associated with the presence of cardiomegaly and evaluate model performance on unseen patient data.
+By analyzing these features, we aim to **uncover patterns** associated with the presence of cardiomegaly and evaluate model performance on unseen patient data.
 
 ---
 
@@ -23,7 +23,7 @@ Before training, all features are standardized to ensure comparability.
 
 ## Model Selection
 
-Due to the small size of the dataset, certain models are more suitable than others.
+Due to the **small size of the dataset**, certain models are more suitable than others.
 
 ### 1. Support Vector Machine (SVM)
 - Works well with **small datasets**  
@@ -38,7 +38,7 @@ Due to the small size of the dataset, certain models are more suitable than othe
 
 ### 2. Logistic Regression (LR)
 - Works well for approximately **linear relationships**  
-- L1 regularization helps reduce overfitting  
+- L1 regularization helps **reduce overfitting**
 
 **Parameters used:**
 - Penalty: L1  
@@ -61,14 +61,14 @@ Due to the small size of the dataset, certain models are more suitable than othe
 | **Support Vector Machine (SVM)** | **82.4%** | **75.0%** | **75.0%** | **100.0%** | **85.7%** |
 | **Logistic Regression** | **79.2%** | **62.5%** | **71.4%** | **83.3%** | **76.9%** |
 
-- **SVC** performed better than Logistic Regression on this dataset.  
-- High recall (1.0) of SVC indicates all positive cases were correctly identified, which is critical in a medical diagnosis context.  
+- **SVC performed better** than Logistic Regression on this dataset.  
+- High recall (1.0) of SVC indicates all positive cases were **correctly identified**, which is critical in a medical diagnosis context.  
 - Logistic Regression performed slightly worse in both precision and recall.
 
 ---
 
 ## Final Remarks
 - Small dataset size limits maximum achievable accuracy.  
-- SVC’s ability to capture nonlinear patterns makes it more suitable for this task.  
+- SVC’s ability to capture nonlinear patterns makes it **more suitable** for this task.  
 - High recall is desirable to avoid missing positive Cardiomegaly cases.  
 - Results highlight the challenges of training reliable models on limited data.
