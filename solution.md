@@ -61,9 +61,13 @@ Due to the **small size of the dataset**, certain models are more suitable than 
 | **Support Vector Machine (SVM)** | **82.4%** | **75.0%** | **75.0%** | **100.0%** | **85.7%** |
 | **Logistic Regression** | **79.2%** | **62.5%** | **71.4%** | **83.3%** | **76.9%** |
 
-- **SVC performed better** than Logistic Regression on this dataset.  
-- High recall (1.0) of SVC indicates all positive cases were **correctly identified**, which is critical in a medical diagnosis context.  
-- Logistic Regression performed slightly worse in both precision and recall.
+
+- **SVC outperformed Logistic Regression** on this dataset, achieving higher test accuracy, F1-score, and recall.
+- The **high recall (1.0) of SVC** indicates that all positive cases were correctly identified.
+- Logistic Regression performed slightly worse in both **precision** and **recall**, suggesting it is less effective at identifying positive cases in this dataset.
+- Probabilistic evaluation further confirms SVC’s advantage:
+  - **ROC AUC = 0.73** and **Average Precision (AP) = 0.90**, demonstrating reliable identification of positive instances
+  - Logistic Regression achieved **ROC AUC = 0.66** and **AP = 0.84**, showing moderate but lower performance compared to SVC.
 
 ---
 
